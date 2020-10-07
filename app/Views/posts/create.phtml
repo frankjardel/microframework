@@ -1,0 +1,9 @@
+<h1><?php echo $this->getPageTitle() ?></h1>
+<form action="/post/store" method="post" accept-charset="utf-8">
+	<input type="text" name="title">
+
+	<textarea name="content"></textarea>
+
+	<a href="/posts">Cancel</a>
+	<button type="submit">Add</button>
+</form>

@@ -1,0 +1,21 @@
+<h1><?php echo $this->getPageTitle(); ?></h1>
+<section>
+	<?php foreach ($this->view->posts as $post): ?>
+
+		<?php $this->renderView('alerts/_success') ?>
+		<?php $this->renderView('alerts/_errors') ?>
+
+		<a href="/post/<?php echo $post->id ?>/show">
+			<h2><?php echo $post->title ?></h2>
+			<p><?php echo $post->content ?></p>
+		</a>
+
+		<a href="/post/<?php echo $post->id ?>/edit">
+			<button>Edit</button>
+		</a>
+		<a href="/post/<?php echo $post->id ?>/delete">
+			<button>Remove</button>
+		</a>
+
+	<?php endforeach; ?>
+</section>

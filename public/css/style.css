@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	color: #373737;
+}
+
+body {
+	background: lightgray;
+}
+
+h1,
+h2,
+p {
+	margin-bottom:10px;
+}
+
+.container {
+	width: 95%;
+	margin-left:2.5%;
+	margin-bottom:15px;
+}
+
+ul {
+	list-style: none;
+	padding: 20px;
+	margin-bottom:15px;
+	background: dodgerblue;
+}

@@ -1,0 +1,22 @@
+<h1><?php echo $this->getPageTitle() ?></h1>
+
+<form action="/post/<?php echo $this->view->post->id ?>/update" method="post" accept-charset="utf-8">
+	<div class="form-group <?php echo ($this->view->errors['title']) ? 'has-error' : '' ?>">
+		<input type="text" name="title" value="<?php echo (isset($this->inputs['title'])) ? $this->inputs['title'] : $this->view->post->title ?>">
+
+		<?php if ($this->errors['title']): ?>
+			<p><?php echo $this->errors['title'] ?></p>
+		<?php endif; ?>
+	</div>
+
+	<div class="form-group <?php echo ($this->errors['content']) ? 'has-error' : '' ?>">
+		<textarea name="content"><?php echo (isset($this->inputs['content'])) ? $this->inputs['content'] : $this->view->post->content ?></textarea>
+
+		<?php if ($this->view->errors['content']): ?>
+			<p><?php echo $this->view->errors['content'] ?></p>
+		<?php endif; ?>
+	</div>
+
+	<a href="/posts">Cancel</a>
+	<button type="submit">Edit</button>
+</form>
